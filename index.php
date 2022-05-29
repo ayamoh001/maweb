@@ -28,7 +28,7 @@ include "./php/close.php";
       <?php include "./cdns/short-icon.css" ?>
       <?php include "./cdns/short-bs.css" ?>
     </style>
-    <title>MAWEB</title>
+    <title>MA-WEB</title>
 
 </head>
 
