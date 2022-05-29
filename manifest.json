@@ -1,0 +1,19 @@
+{
+    "name": "Mohamed-Ayaou-WEB",
+    "short_name": "MA-WEB",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#151515",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/imgs/my-icon-sm.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "/imgs/my-icon.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
