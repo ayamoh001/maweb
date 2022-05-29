@@ -21,6 +21,7 @@ include "./php/close.php";
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#eeeeee">
     <meta rel="apple-touch-icon" href="./imgs/my-icon.png">
+    <meta rel="icon" href="./imgs/my-icon.png">
     <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -34,85 +35,80 @@ include "./php/close.php";
                 <img src="./imgs/my-icon-sm.png" class="w-100 h-100 rounded-circle img-fluid">
             </div>
             <div class="text-dark h1 fw-bold"><?php echo htmlspecialchars($account[0]["fname"] ." " . $account[0]["lname"])?></div>
-            <div class=" text-muted"><?php echo htmlspecialchars($account[0]["email"])?></div>
+            <div class="text-muted"><?php echo htmlspecialchars($account[0]["email"])?></div>
             <hr class="m-0 p-0">
             <div class="text-muted">Registred in: <?php echo htmlspecialchars($account[0]["date"])?></div>
         </div>
     </div>   
 
-
-
-    
-
-        <div class="card text-center w-100 py-3 text-light">
+        <div class="card text-center w-100 pt-3 text-light">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Posts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Media</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Info</a>
-                </li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Posts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Info</a></li>
                 </ul>
             </div>
-            <div class="card-body p-2 p-sm-5">
-                <div class="card rounded-3 overflow-hidden mb-5">
-                    <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
-                        <div class="d-flex align-self-center align-items-center">
-                            <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
-                            <h1 class="card-title d-inline-block display-5">User Name</h1>
+            <div class="card-body bg-dark">
+                <div class="w-50 m-auto">
+                    <div class="card rounded-3 overflow-hidden mb-5">
+                        <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
+                            <div class="d-flex align-self-center align-items-center">
+                                <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
+                                <div class="display-block text-start">
+                                <h1 class="card-title fw-bold">User Name</h1>
+                                <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
+                                </div>
+                            </div>
+                            <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
                         </div>
-                        <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
-                    </div>
-                    <div class="card-body text-dark">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
-                        <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
-                    </div>
-                    <img src="./imgs/img1.webp" class="card-img-bottom h-75" alt="test">
-                </div>
-
-                <div class="card rounded-3 overflow-hidden mb-5">
-                    <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
-                        <div class="d-flex align-self-center align-items-center">
-                            <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
-                            <h1 class="card-title d-inline-block display-5">User Name</h1>
+                        <div class="card-body text-dark">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
+                            
                         </div>
-                        <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
+                        <img src="./imgs/img1.webp" class="card-img-bottom h-75" alt="test">
                     </div>
-                    <div class="card-body text-dark">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
-                        <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
-                    </div>
-                    <img src="./imgs/img5.webp" class="card-img-bottom h-75" alt="test">
-                </div>
-
-                <div class="card rounded-3 overflow-hidden mb-5">
-                    <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
-                        <div class="d-flex align-self-center align-items-center">
-                            <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
-                            <h1 class="card-title d-inline-block display-5">User Name</h1>
+                    <div class="card rounded-3 overflow-hidden mb-5">
+                        <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
+                            <div class="d-flex align-self-center align-items-center">
+                                <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
+                                <div class="display-block text-start">
+                                <h1 class="card-title fw-bold">User Name</h1>
+                                <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
+                                </div>
+                            </div>
+                            <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
                         </div>
-                        <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
+                            
+                        </div>
+                        <img src="./imgs/img1.webp" class="card-img-bottom h-75" alt="test">
                     </div>
-                    <div class="card-body text-dark">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
-                        <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
+                    <div class="card rounded-3 overflow-hidden mb-5">
+                        <div class="card-header mb-2 w-100 text-dark p-3 d-flex justify-content-between align-content-center">
+                            <div class="d-flex align-self-center align-items-center">
+                                <img src="./imgs/my-icon-sm.png" class="rounded-circle me-1 me-sm-4 w-25" alt="test">
+                                <div class="display-block text-start">
+                                <h1 class="card-title fw-bold">User Name</h1>
+                                <p class="card-text"><small class="text-muted"><?php echo date("Y/m/d H:i")?></small></p>
+                                </div>
+                            </div>
+                            <div class="fs-5 bi bi-three-dots-vertical d-inline-block  align-self-center "></div>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam laudantium corrupti ipsam accusantium tempora repellat cupiditate minima fugiat ullam consequuntur dolorem ipsum ut ad, illum tenetur error sint a. Repudiandae.</p>
+                            
+                        </div>
+                        <img src="./imgs/img1.webp" class="card-img-bottom h-75" alt="test">
                     </div>
-                    <img src="./imgs/img9.webp" class="card-img-bottom h-75" alt="test">
                 </div>
-                
             </div>
         </div>
-        
-            
 
-       
     </div>
-    <div class="bg-warning text-dark text-center">
-        <h1 class="py-4">Copy rights &copy; <?php echo date("Y")?></h1>
+    <div class="bg-dark text-light text-center">
+        <h1 class="py-4 m-0">Copy rights &copy; <?php echo date("Y")?></h1>
     </div>
 
 <script src="./js/bootstrap.bundle.min.js"></script>

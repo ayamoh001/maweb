@@ -14,7 +14,7 @@ include "./php/close.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Portfolio and ordering website">
-    <meta name="keywords" content="HTML,CSS,JavaScript,PHP,Bootstrap 5,PWA,Python,Py,Portfolio,Web design,Design order">
+    <meta name="keywords" content="HTML,CSS,JavaScript,PHP,Bootstrap 5,PWA,Python,Python,Portfolio,Web design,Design order">
     <meta name="author" content="Mohamed Ayaou">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

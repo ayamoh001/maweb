@@ -3,7 +3,18 @@ const assets = [
   "/index.php",
   "/cdns/bootstrap.min.css",
   "/js/bootstrap.bundle.min.js",
-  "/js/script.js"
+  "/js/script.js",
+  "/imgs/my-icon-sm.png",
+  "/imgs/my-icon.png",
+  "img1.webp",
+  "img2.webp",
+  "img3.webp",
+  "img4.webp",
+  "img5.webp",
+  "img6.webp",
+  "img7.webp",
+  "img8.webp",
+  "img9.webp"
 ]
 
 self.addEventListener("install", installEvent => {

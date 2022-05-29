@@ -3,7 +3,7 @@
         <div class="g-3 row row-cols-1 row-cols-md-3 row-cols-sm-2 ">
             <?php foreach($the_orders as $order): ?>
                 <div class="col">
-                    <div class="card text-start">
+                    <div class="card text-start h-100">
                         <div class="card-header text-uppercase"><?php echo $order["the_order"] ?> </div>
 
                         <div class="card-body">

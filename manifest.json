@@ -8,11 +8,11 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/imgs/my-icon-sm.png",
+        "src": "./imgs/my-icon-sm.png",
         "type": "image/png", "sizes": "192x192"
       },
       {
-        "src": "/imgs/my-icon.png",
+        "src": "./imgs/my-icon.png",
         "type": "image/png", "sizes": "512x512"
       }
     ]

@@ -1,4 +1,17 @@
 <?php 
+$fname = "";
+$lname = "";
+$email = "";
+$the_order = "";
+$message = "";
+
+$errors=[
+    "fnameError"=>"",
+    "lnameError"=>"",
+    "emailError"=>"",
+    "messageError"=>"",
+    "the_orderError"=>""
+];
 
 if (isset($_POST["send-btn"])){
     $fname = mysqli_real_escape_string($conn,$_POST["fname"]);
@@ -7,14 +20,6 @@ if (isset($_POST["send-btn"])){
     $the_order = mysqli_real_escape_string($conn,$_POST["the_order"]);
     $message = mysqli_real_escape_string($conn,$_POST["message"]);
     $date = mysqli_real_escape_string($conn,date("Y/m/d H:i"));
-    
-
-    $errors=[
-        "fnameError"=>"",
-        "lnameError"=>"",
-        "emailError"=>"",
-        "messageError"=>""
-    ];
 
     if(empty($fname)){$errors["fnameError"]="The first name should not be empty.";};
 
@@ -33,7 +38,6 @@ if (isset($_POST["send-btn"])){
             
         if(mysqli_query($conn,$sql)){
             $command=`python ./py/sender.py $email $fname $lname $the_order`;
-            echo $command;
             header("location: " . $_SERVER["PHP_SELF"]);
         }else{
             echo "Error: " . mysqli_error($conn);

@@ -3,16 +3,18 @@ session_start();
 
 include "./php/con_db.php";
 
+$email = "";
+$password = ""; 
+
+$errors=[
+    "emailError"=>"",
+    "passwordError"=>""
+];
+
 
 if (isset($_POST["signin-btn"])){
     $email = mysqli_real_escape_string($conn,$_POST["email"]);
-    $password = mysqli_real_escape_string($conn,$_POST["password"]);
-
-    $errors=[
-        "emailError"=>"",
-        "passwordError"=>""
-    ];
-
+    $password = sha1(mysqli_real_escape_string($conn,$_POST["password"]));
 
     if(empty($email)){$errors["emailError"]="The email should not be empty.";};
 
@@ -26,7 +28,7 @@ if (isset($_POST["signin-btn"])){
         $res= mysqli_query($conn,$sql);
         $acc= mysqli_fetch_all($res,MYSQLI_ASSOC);
         if(!array_filter($acc)){
-          echo "<script>alert('We have not find any account! Sign up or correct your info.')</script>";
+          echo "<script>alert('We have not find any account! Sign up now or correct your info.')</script>";
         }else{
           $_SESSION["fname"] = $acc[0]["fname"];
           $_SESSION["lname"] = $acc[0]["lname"];
@@ -67,7 +69,7 @@ include "./php/close.php";
 
   <main class="form-signin container-sm px-5  text-center my-auto" >
     <form action="./signin.php" method="Post" class="g-3 row row-cols-1 px-sm-5">
-      <img class="mb-3" src="./imgs/undraw_personal_finance_tqcd (1).svg" alt="logo" width="72" height="57">
+      <img class="mb-3" src="./imgs/hero3.svg" alt="logo" width="72" height="57">
       <h1 class="h3 m-0 mt-4 text-light fw-normal">Please sign in:</h1>
 
 
@@ -79,7 +81,7 @@ include "./php/close.php";
       <div class="col p-0 form-floating">
         <input type="password" name="password" value="<?php echo htmlspecialchars($acc["password"]) ;?>" class="form-control" placeholder="Password">
         <label for="floatingPassword">Password:</label>
-        <div class="text-light"><?php echo htmlspecialchars($errors["passwordError"]);?></div>
+        <div class="text-light"></div>
       </div>
 
       <button name="signin-btn" class="col w-100 btn btn-lg btn-warning" type="submit">Sign in</button>

@@ -1,3 +1,3 @@
 <?php 
-mysqli_free_result($res);
+if(isset($res)){mysqli_free_result($res);};
 mysqli_close($conn);

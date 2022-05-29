@@ -64,9 +64,9 @@ session_start();
         </div>
     </div>
 
-    <div class="overflow-auto d-flex bg-light vh-100">
-        <div class="px-4 py-5 my-auto text-center">
-            <img class="d-block mx-auto mb-4" src="./imgs/undraw_personal_finance_tqcd (1).svg" alt="" width="72" height="57">
+    <div class="overflow-auto d-flex bg-light vh-100 w-100">
+        <div class="px-4 py-5 m-auto text-center">
+            <img class="d-block mx-auto mb-4" src="./imgs/hero1.svg" alt="" width="72" height="57">
             <h1 class="display-5 text-uppercase fw-bold">You have no content yet!</h1>
             <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis incidunt facilis molestiae voluptate explicabo.</p>

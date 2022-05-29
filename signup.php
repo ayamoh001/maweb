@@ -3,20 +3,23 @@ session_start();
 
 include "./php/con_db.php";
 
+$fname = "";
+$lname = "";
+$email = "";
+$errors=[
+  "fnameError"=>"",
+  "lnameError"=>"",
+  "emailError"=>"",
+  "passwordError"=>""
+];
+
 if (isset($_POST["signup-btn"])){
 
   $fname = mysqli_real_escape_string($conn,$_POST["fname"]);
   $lname = mysqli_real_escape_string($conn,$_POST["lname"]);
   $email = mysqli_real_escape_string($conn,$_POST["email"]);
-  $password = mysqli_real_escape_string($conn,$_POST["password"]);
+  $password = sha1(mysqli_real_escape_string($conn,$_POST["password"]));
   $date = mysqli_real_escape_string($conn,date("Y/m/d H:i"));
-
-  $errors=[
-      "fnameError"=>"",
-      "lnameError"=>"",
-      "emailError"=>"",
-      "passwordError"=>""
-  ];
 
   if(empty($fname)){$errors["fnameError"]="The first name should not be empty.";};
 
@@ -87,7 +90,7 @@ include "./php/close.php";
 <div class="bg-dark d-flex vh-100 vw-100 overflow-auto">
       <main class="form-signin container-sm px-5  text-center p-0 my-auto" >
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="Post" class="row g-3 px-sm-5">
-          <img class="mt-5" src="./imgs/undraw_personal_finance_tqcd (1).svg" alt="logo" width="72" height="57">
+          <img class="mt-5" src="./imgs/hero3.svg" alt="logo" width="72" height="57">
           <h1 class="h3 m-0 mt-4 text-light fw-normal">Please sign up:</h1>
 
 
@@ -109,7 +112,7 @@ include "./php/close.php";
             <div class="text-light"><?php echo htmlspecialchars($errors["emailError"]);?></div>
           </div>
           <div class="p-0 form-floating">
-            <input type="password" name="password" value="<?php echo htmlspecialchars($password) ;?>" class="form-control" placeholder="Password">
+            <input type="password" name="password" class="form-control" placeholder="Password">
             <label for="floatingPassword">Password:</label>
             <div class="text-light"><?php echo htmlspecialchars($errors["passwordError"]);?></div>
           </div>
