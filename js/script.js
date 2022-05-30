@@ -13,9 +13,10 @@ en.addEventListener("click", function () {
 var changeLang = lang => {
 
     var req= new XMLHttpRequest();
-    req.open("GET","../lang/lang.json");
+    req.open("GET","./lang/lang.json");
 
     req.onload = function() {
+        console.log(req.responseText)
         var langData= JSON.parse(req.responseText);
         document.querySelector("#resume p").textContent = langData[lang]["resume"][1];
         var headerTags = document.querySelectorAll("#mainmenu li a");
